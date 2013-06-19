@@ -2,9 +2,98 @@
 <html>
 <head>
 	<title>tranSMART Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.3.1.css" />
+    <link rel="stylesheet" href="css/themes/transmart.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<h1></h1>
-	<p>This is a project to create mobile UI for transmart app.</p>
+
+    <!-- Login Page -->
+    <div data-role="page" id="login">
+        <div data-role="header">
+            <h1>Welcome</h1>
+        </div>
+        <div data-role="content">
+            <label for="text-basic">Username</label>
+            <input type="text" name="text-basic" id="text-basic" value="">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" autocomplete="off">
+
+            <!--<button data-icon="arrow-d" id="login-btn">Log in</button>-->
+            <a href="#home" data-role="button" data-icon="arrow-d">Log in</a>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>tranSMART v0.1</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#study-cat">
+                    <h2>Studies</h2>
+                    <p>Explore all colected private and public studies in tranSMART database.</p></a>
+                </li>
+                <li><a href="#">
+                    <h2>Analysis</h2>
+                    <p>Perform analysis for selected cohorts.</p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Study Category Page -->
+    <div data-role="page" id="study-cat">
+        <div data-role="header">
+            <h1>Studies</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">PUBLIC</li>
+                <li>
+                    <a href="index.html">
+                        <h2>Belt</h2>
+                        <p>BELT stud</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Cairo-1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Cairo-2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </a>
+                </li>
+                <li data-role="list-divider">PRIVATE</li>
+                <li>
+                    <a href="index.html">
+                        <h2>Rinus</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
 </body>
+
+<!--Javascript libs declaration-->
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/jquery.mobile-1.3.1.js"></script>
+<script type="text/javascript" src="js/lib/jquery.tmpl.js" ></script>
+<script type="text/javascript" src="js/lib/underscore-min.js"></script>
+<script type="text/javascript" src="js/lib/backbone.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
 </html>
